@@ -1,37 +1,39 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa
-img {
+
+.header__img {
   width: 100%;
 }
-.aaa
+
 .more_inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .aaa {
+  .header {
     text-align: center;
   }
   
 }
-.centered-main-page-element {
+.centered-page {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.task,
+.new-task__input,
+.task-list__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -39,16 +41,16 @@ img {
 .task-row-wrapper {
   display: flex;
 }
-ul {
+.task-list {
   margin: 0;
   padding: 0px;
-}
-li,
-h3 {
   list-style: none;
 }
-input,
-button{
+
+button,
+.task-list__checkbox,
+.new-task__input,
+.task-list__input {
   outline: none;
 }
 button {
@@ -74,7 +76,9 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+
+.new-task__input,
+.task-list__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -86,7 +90,8 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.new-task__input:focus,
+.task-list__input:focus {
     color: #333;
 }
 
@@ -95,7 +100,7 @@ label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.new-task__input {
   width: 318px;
 }
 
@@ -113,7 +118,7 @@ li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.task-list__checkbox {
     margin: 0 10px;
 }
 li > label {
@@ -122,7 +127,7 @@ li > label {
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+.task-list__input {
     width: 226px;
 }
 button.delete
@@ -144,21 +149,17 @@ label {
 }
 
 /* Edit Task */
-ul
-li
-input[type=text] {
+.task-list__input {
   display: none;
 }
 
-ul
-li.editMode
-input[type=text] {
+.editMode
+.task-list__input {
   display: inline-block;
   width: 224px;
 }
 
-ul
-li.editMode
+.editMode
 label {
   display: none;
 }
