@@ -91,7 +91,7 @@
 }
 .new-task__input:focus,
 .task-list__input:focus {
-    color: #333;
+  color: #333;
 }
 
 /* New Task */
@@ -114,7 +114,7 @@
 }
 
 .task-list__checkbox {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 .task-list__task > label {
   padding-left: 10px;
@@ -123,7 +123,7 @@
   width: 226px;
 }
 .task-list__input {
-    width: 226px;
+  width: 226px;
 }
 .task-list__btn-img {
   height: 2em;
